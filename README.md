@@ -1,5 +1,7 @@
 ## JS StackTrace
 
+A helper library to log client-side errors to a server. Intended only for use in dev/staging environments.
+
 ### Team
 
 * [Bob Holt](http://github.com/bobholt)
