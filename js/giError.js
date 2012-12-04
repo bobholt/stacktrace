@@ -16,10 +16,10 @@ q=/[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u20
   var postURL = "http://sample.url";
 
   // Create Namespace
-	window._GI = window._GI || {};
+	window._STACK = window._STACK || {};
 
   // Attach error function
-	window._GI.Error = function(){
+	window._STACK.Error = function(){
 
     // Hoist variables we'll define later
 		var ex = null;
@@ -155,7 +155,7 @@ q=/[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u20
   // Return true so the application can continue
 	window.onerror = function(msg, file, line) {
 
-		new _GI.Error(msg, file, line);
+		new _STACK.Error(msg, file, line);
 
 		return true;
 
